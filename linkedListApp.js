@@ -154,9 +154,8 @@ class LinkedList {
     return -1;
   }
   
-
-
-}
+  
+}// class end
 
 
 function isOdd(list){
@@ -167,7 +166,7 @@ function isOdd(list){
 
 function isPalindrome(linkedList){
   midIndex=Math.floor(linkedList.sizeOf()/2);
-  let midElement;
+ 
 
   if(isOdd(linkedList)){
     linkedList.removeFrom(midIndex);
@@ -187,25 +186,7 @@ function isPalindrome(linkedList){
 
 
 
-
-
-
-
-
-
-
-
 let ll=new LinkedList;
-// ll.add("a");
-// ll.add("b");
-// ll.add("c");
-// ll.add("d");
-// ll.add("e");
-// ll.add("f");
-// ll.add("g");
-// ll.add("h");
-// ll.indexOf("b")
-// ll.insertAt("mmmmm",2)
 ll.add("m");
 ll.add("r");
 ll.add("o");
@@ -215,5 +196,15 @@ ll.add("o");//mrovqorm
 ll.add("r");
 ll.add("m");
 
-console.log(ll)
-console.log(isPalindrome(ll))
+
+let ll2=new LinkedList;
+ll2.add("m");
+ll2.add("r");
+ll2.add("o");
+ll2.add("o");//mrovqorm
+ll2.add("r");
+ll2.add("m");
+
+console.log("mroqvorm  "+" => Is Palindrome ?  "+ isPalindrome(ll))
+
+console.log("mroorm "+" => Is Palindrome ?  "+ isPalindrome(ll2))

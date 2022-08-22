@@ -70,11 +70,13 @@ function isBalancedBrackets(str) {
       }
     }
   }
-  return true;
+  if (stackOpenBrackets.isEmpty())  return true;
+  else return false
+ 
 }
 
 
-console.log(isBalancedBrackets("[((k{o}}j)o)o]"));
+console.log( "[([])] =>>" +"Is BalancedBrackets?"+isBalancedBrackets("[([])]"));
 
 
 
@@ -114,6 +116,17 @@ class Queue{
   lenght(){
   return this.queue.length;
   }
+
+
+  printElements() {
+    let elements = "";
+    this.queue.forEach((element) => {
+      elements += element + "  ";
+    });
+
+    // console.log(elements);
+    return elements;
+  }
   
   }
   
@@ -126,7 +139,7 @@ class Queue{
       stack.push(queue.deQueue());
 
     }
-    console.log(stack);
+    // console.log(stack);
     for (let index = 0; index < k; index++) {
      newQueue.enQueue(stack.pop())
     }
@@ -134,7 +147,7 @@ class Queue{
       newQueue.enQueue(queue.deQueue());
 
     }
-    console.log(newQueue);
+  
   return newQueue;
   }
 
@@ -151,6 +164,9 @@ class Queue{
   queue1.enQueue(4)
   queue1.enQueue(5) 
   queue1.enQueue(6)
-  console.log(queue1)
+
+  console.log("reverse The Order of queue =>> "+ queue1.printElements())
   queue1 = reverseTheOrder(6,queue1);
   
+  console.log("reversed Queue =>> " + queue1.printElements());
+ 
